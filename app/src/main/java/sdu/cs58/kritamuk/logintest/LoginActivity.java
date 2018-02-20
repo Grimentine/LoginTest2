@@ -35,8 +35,13 @@ public class LoginActivity extends AppCompatActivity {
                 userString = usernameEditText.getText().toString() .trim();
                 passString = passwordEditText.getText() .toString() .trim();
 
+                //ตรวจสอบช่องว่าง or ค่าว่าง
+                if ((nameString.length()==0)||(userString.length()==0)||(passString.length()==0)) {
+                    Toast.makeText(getApplicationContext(), "กรุณาใส่ข้อมูลให้ครบทุกช่อง", Toast.LENGTH_SHORT).show();
+                }
+
                 //ตรวจสอบการ Login ผ่านคำสั่ง if & else
-                if ((userString.equals("Karter Channel suck"))&& (passString.equals("1234"))) {
+                if ((userString.equals("admin"))&& (passString.equals("1234"))) {
                     Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_SHORT).show();
                 }
                 else {
